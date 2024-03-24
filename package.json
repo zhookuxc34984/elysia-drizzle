@@ -3,6 +3,9 @@
   "version": "1.0.50",
   "scripts": {
     "db:generate": "drizzle-kit generate:mysql --schema ./src/db/schema/index.ts --out=./src/db/migrations",
+    "db:migrate": "bun run ./src/db/migrate.ts",
+    "format": "bunx @biomejs/biome format ./src --write",
+    "lint": "bunx @biomejs/biome lint ./src",
     "dev": "bun run --watch src/index.ts"
   },
   "dependencies": {
